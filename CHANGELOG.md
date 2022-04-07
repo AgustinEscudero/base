@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+### Changed
+### Removed
+### Fixed
+### Deprecated
+### Security
+
+## [0.1.1] - 2022-04-7
+
+### Added
 - Estructura de carpeta `/src`
 - Añadir licencia tipo MIT
 - Incluir documento CHANGELOG.md
@@ -13,14 +22,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Añadir `.gitignore`
 - Inicializar proyecto Node y `package.json`
 - Instalación de TailwindCSS
-### Changed
-### Removed
-### Fixed
-### Deprecated
-### Security
-
-## [0.1.0] - 2022-04-7
-
 
 
 
