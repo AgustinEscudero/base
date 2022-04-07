@@ -12,8 +12,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 ### Security
 
-## [0.1.1] - 2022-04-7
+## [0.2.0] - 2022-04-7
+### Added
+- Instalación y configuración de ESBuild
 
+
+## [0.1.1] - 2022-04-7
 ### Added
 - Estructura de carpeta `/src`
 - Añadir licencia tipo MIT
