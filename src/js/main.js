@@ -1,1 +1,1 @@
-alert('hola ke pasa...')
+console.log('hola ke pasa...')

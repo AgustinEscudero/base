@@ -1,0 +1,34 @@
+---
+titulo: "Hola soy el título. sfdfsddsf.."
+test: 
+    - 1
+    - 2
+    - 3
+---
+
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    {% include "include.njk" %}
+    {% set username = "joe" %}
+    <p>{{ "this is a test" | capitalize }}</p>
+    {% for i in [1, 2, 3, 4] | reverse %}
+    <li>{{ i }}</li>
+    {% endfor %}
+
+    {% set numbers=[0, 1, 2, 3, 4, 5] %}
+
+    <p>{{ numbers | select("odd") | join }}</p>
+    <p>{{ numbers | select("even") | join }}</p>
+    <p>{{ numbers | select("divisibleby", 2) | join }}</p>
+    <p>{{ numbers | select() | join }}</p>
+
+    <h2 class="m-6 bg-green-300 text-center"> {{username}} </h2>
+    <h2 class="bg-blue-300">{{ titulo }}</h2>
+    <h1 class="bg-red-500">Hola Mundo1</h1>
+    {% for item in test %}
+    <li>Id: {{ item.id }} / Nombre: {{ item.name | wordcount }}</li>
+    {% endfor %}
+
+{% endblock %}

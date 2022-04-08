@@ -12,10 +12,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 ### Security
 
+## [1.0.0] - 2022-04-8
+### Added
+- Instalación y configuración inicial Eleventy
+- Añadir varios ejemplos.
+
 ## [0.2.0] - 2022-04-7
 ### Added
 - Instalación y configuración de ESBuild
-
 
 ## [0.1.1] - 2022-04-7
 ### Added
