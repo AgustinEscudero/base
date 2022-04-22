@@ -11,6 +11,15 @@ test:
 {% block content %}
 
     {% include "include.njk" %}
+
+    {% set items = [1,2,3,4,5,6] %}
+    {% set dash = joiner("-") %}
+    {% for item in items | batch(2) %}
+        {{ dash() }} {% for items in item %}
+        {{ items }}
+        {% endfor %}
+    {% endfor %}
+
     {% set username = "joe" %}
     <p>{{ "this is a test" | capitalize }}</p>
     {% for i in [1, 2, 3, 4] | reverse %}
@@ -24,11 +33,31 @@ test:
     <p>{{ numbers | select("divisibleby", 2) | join }}</p>
     <p>{{ numbers | select() | join }}</p>
 
+    {% for i in [1, 2, 3, 4] | reverse %}
+    {{ i }}
+    {% endfor %}
+    <br>
+    {% for i in "foobar" | list %}{{ i }}, {% endfor %}
+    <br>
+    {{ [1,2,3,4,5,6,7,8,9] | random }}
+
+    {% set arr = [1,2,3,4,5,6,7,8,9] %}
+
+    <div class="columwrapper">
+    {%- for items in arr | slice(3) %}
+        <ul class="column-{{ loop.index }}">
+        {%- for item in items %}
+        <li>{{ item }}</li>
+        {%- endfor %}
+        </ul>
+    {%- endfor %}
+    </div>
+
     <h2 class="m-6 bg-green-300 text-center"> {{username}} </h2>
     <h2 class="bg-blue-300">{{ titulo }}</h2>
-    <h1 class="bg-red-500">Hola Mundo1</h1>
+    <h1 class="bg-red-500">Hola Mundo</h1>
     {% for item in test %}
     <li>Id: {{ item.id }} / Nombre: {{ item.name | wordcount }}</li>
     {% endfor %}
-
+    
 {% endblock %}

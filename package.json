@@ -5,9 +5,13 @@
   "main": "index.js",
   "scripts": {
     "dev": "run-p dev:*",
+    "build": "run-s prod:*",
     "dev:tailwind": "npx tailwindcss -i ./src/css/main.css -o ./dist/main.css --watch",
     "dev:esbuild": "npx esbuild ./src/js/main.js --outfile=./dist/main.js --bundle --watch",
-    "dev:eleventy": "npx @11ty/eleventy --serve --quiet --port=8080"
+    "dev:eleventy": "npx @11ty/eleventy --serve --quiet --port=8080",
+    "prod:tailwind": "npx tailwindcss -i ./src/css/main.css -o ./dist/main.css --minify",
+    "prod:esbuild": "npx esbuild ./src/js/main.js --outfile=./dist/main.js --bundle --minify",
+    "prod:eleventy": "npx @11ty/eleventy"
   },
   "repository": {
     "type": "git",
